@@ -1,0 +1,15 @@
+/home/wassim/Desktop/RBTC_ARM/install/RBTC_ARM_Description/share/ament_index/resource_index/package_run_dependencies/RBTC_ARM_Description
+/home/wassim/Desktop/RBTC_ARM/install/RBTC_ARM_Description/share/ament_index/resource_index/parent_prefix_path/RBTC_ARM_Description
+/home/wassim/Desktop/RBTC_ARM/install/RBTC_ARM_Description/share/RBTC_ARM_Description/environment/ament_prefix_path.sh
+/home/wassim/Desktop/RBTC_ARM/install/RBTC_ARM_Description/share/RBTC_ARM_Description/environment/ament_prefix_path.dsv
+/home/wassim/Desktop/RBTC_ARM/install/RBTC_ARM_Description/share/RBTC_ARM_Description/environment/path.sh
+/home/wassim/Desktop/RBTC_ARM/install/RBTC_ARM_Description/share/RBTC_ARM_Description/environment/path.dsv
+/home/wassim/Desktop/RBTC_ARM/install/RBTC_ARM_Description/share/RBTC_ARM_Description/local_setup.bash
+/home/wassim/Desktop/RBTC_ARM/install/RBTC_ARM_Description/share/RBTC_ARM_Description/local_setup.sh
+/home/wassim/Desktop/RBTC_ARM/install/RBTC_ARM_Description/share/RBTC_ARM_Description/local_setup.zsh
+/home/wassim/Desktop/RBTC_ARM/install/RBTC_ARM_Description/share/RBTC_ARM_Description/local_setup.dsv
+/home/wassim/Desktop/RBTC_ARM/install/RBTC_ARM_Description/share/RBTC_ARM_Description/package.dsv
+/home/wassim/Desktop/RBTC_ARM/install/RBTC_ARM_Description/share/ament_index/resource_index/packages/RBTC_ARM_Description
+/home/wassim/Desktop/RBTC_ARM/install/RBTC_ARM_Description/share/RBTC_ARM_Description/cmake/RBTC_ARM_DescriptionConfig.cmake
+/home/wassim/Desktop/RBTC_ARM/install/RBTC_ARM_Description/share/RBTC_ARM_Description/cmake/RBTC_ARM_DescriptionConfig-version.cmake
+/home/wassim/Desktop/RBTC_ARM/install/RBTC_ARM_Description/share/RBTC_ARM_Description/package.xml

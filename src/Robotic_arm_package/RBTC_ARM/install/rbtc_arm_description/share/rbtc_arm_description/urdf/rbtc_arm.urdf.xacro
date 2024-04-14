@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+
+
+<robot 
+  name="rbtc_arm_description" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+  <xacro:include filename="$(find rbtc_arm_description)/urdf/rbtc_arm_gazebo.xacro"/>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0322125722891531 -0.0450904382938323 0.0430857594162836"
+        rpy="0 0 0" />
+      <mass
+        value="0.0750869004773183" />
+      <inertia
+        ixx="4.23886363599727E-05"
+        ixy="-8.08436179929658E-12"
+        ixz="6.65028976677411E-08"
+        iyy="1.8766674682362E-05"
+        iyz="7.17327858728356E-08"
+        izz="3.98976211467039E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="pan_link">
+    <inertial>
+      <origin
+        xyz="0.0121597754332669 0.00617031671697683 0.100269853687034"
+        rpy="0 0 0" />
+      <mass
+        value="0.0391115640031782" />
+      <inertia
+        ixx="9.52906858889322E-06"
+        ixy="-1.14270462060105E-06"
+        ixz="2.89413881015819E-08"
+        iyy="1.11585037533337E-05"
+        iyz="-5.9875116565375E-08"
+        izz="1.13226152634095E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/pan_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/pan_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_1"
+    type="revolute">
+    <origin
+      xyz="0.03725 -0.054499 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="pan_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="1.07"
+      velocity="2.25" />
+  </joint>
+  <link
+    name="tilt_link">
+    <inertial>
+      <origin
+        xyz="0.0340658298771595 -0.0174824203639809 0.0450091906125141"
+        rpy="0 0 0" />
+      <mass
+        value="0.0145715061545409" />
+      <inertia
+        ixx="1.02030766473455E-05"
+        ixy="2.24998187471656E-06"
+        ixz="-1.52556582758867E-06"
+        iyy="6.63436773563886E-06"
+        iyz="-7.37221493910408E-07"
+        izz="8.85099329790317E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/tilt_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/tilt_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_2"
+    type="revolute">
+    <origin
+      xyz="-0.011158 0.026539 0.1077"
+      rpy="0 0 0" />
+    <parent
+      link="pan_link" />
+    <child
+      link="tilt_link" />
+    <axis
+      xyz="0.4351 -0.90038 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="1.07"
+      velocity="2.25" />
+  </joint>
+  <link
+    name="tilt_link2">
+    <inertial>
+      <origin
+        xyz="0.0323300763250958 -0.0179693187111258 0.00351917647076791"
+        rpy="0 0 0" />
+      <mass
+        value="0.0415514970399526" />
+      <inertia
+        ixx="9.36512363364744E-06"
+        ixy="2.09499396607922E-07"
+        ixz="-1.05560533082383E-06"
+        iyy="8.88684831012535E-06"
+        iyz="-5.98214181934272E-07"
+        izz="1.47112404798138E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/tilt_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/tilt_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_3"
+    type="revolute">
+    <origin
+      xyz="0.042284 0.020434 0.091671"
+      rpy="0 0 0" />
+    <parent
+      link="tilt_link" />
+    <child
+      link="tilt_link2" />
+    <axis
+      xyz="0.4351 -0.90038 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="1.07"
+      velocity="2.25" />
+  </joint>
+  <link
+    name="tilt_link3">
+    <inertial>
+      <origin
+        xyz="0.0307581705802682 -0.0193756528792168 0.0148465465687513"
+        rpy="0 0 0" />
+      <mass
+        value="0.0637086636084426" />
+      <inertia
+        ixx="1.07476277265833E-05"
+        ixy="-8.39454123772837E-08"
+        ixz="-3.54690238089718E-07"
+        iyy="1.05040450064873E-05"
+        iyz="-1.08351381177356E-07"
+        izz="1.70770325354857E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/tilt_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/tilt_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_4"
+    type="revolute">
+    <origin
+      xyz="0.086984 0.036759 0.02048"
+      rpy="0 0 0" />
+    <parent
+      link="tilt_link2" />
+    <child
+      link="tilt_link3" />
+    <axis
+      xyz="0.4351 -0.90038 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="1.07"
+      velocity="2.25" />
+  </joint>
+  <link
+    name="arm_rot_link">
+    <inertial>
+      <origin
+        xyz="0.0798240927961087 0.0142525468035986 -0.012664035886584"
+        rpy="0 0 0" />
+      <mass
+        value="0.035038743743134" />
+      <inertia
+        ixx="7.41110516394362E-06"
+        ixy="1.24617888225622E-06"
+        ixz="1.55558821701446E-07"
+        iyy="5.393640730361E-06"
+        iyz="-5.8437556389652E-09"
+        izz="5.95334334046931E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/arm_rot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/arm_rot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_5"
+    type="revolute">
+    <origin
+      xyz="0.014779 -0.018682 0.027408"
+      rpy="0 0 0" />
+    <parent
+      link="tilt_link3" />
+    <child
+      link="arm_rot_link" />
+    <axis
+      xyz="0.89837 0.43413 0.066865" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="1.07"
+      velocity="2.25" />
+  </joint>
+  <link
+    name="claw_gear_right">
+    <inertial>
+      <origin
+        xyz="0.00733253737176701 0.0030637929040965 -0.000475299028632248"
+        rpy="0 0 0" />
+      <mass
+        value="0.0013754890893663" />
+      <inertia
+        ixx="6.96811904044285E-08"
+        ixy="-6.03067792542813E-08"
+        ixz="-1.42764704741264E-08"
+        iyy="2.09350483029757E-07"
+        iyz="-5.61029499623062E-09"
+        izz="2.76071539308495E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/claw_gear_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/claw_gear_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_6"
+    type="revolute">
+    <origin
+      xyz="0.076557 0.01956 0.011654"
+      rpy="0 0 0" />
+    <parent
+      link="arm_rot_link" />
+    <child
+      link="claw_gear_right" />
+    <axis
+      xyz="0.060204 0.029093 -0.99776" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="1.07"
+      velocity="2.25" />
+  </joint>
+  <link
+    name="claw_finger_right">
+    <inertial>
+      <origin
+        xyz="0.0167099520180898 0.0147135953100836 0.000435044625649028"
+        rpy="0 0 0" />
+      <mass
+        value="0.000915119454499884" />
+      <inertia
+        ixx="1.00899961269851E-07"
+        ixy="-1.23645647110571E-07"
+        ixz="-1.41408536044103E-08"
+        iyy="1.76370229480981E-07"
+        iyz="-1.03512930385455E-08"
+        izz="2.74350634303337E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/claw_finger_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/claw_finger_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_8"
+    type="revolute">
+    <origin
+      xyz="0.028474 0.011097 0.0040462"
+      rpy="0 0 0" />
+    <parent
+      link="claw_gear_right" />
+    <child
+      link="claw_finger_right" />
+    <axis
+      xyz="0.060204 0.029093 -0.99776" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="1.07"
+      velocity="2.25" />
+  </joint>
+  <link
+    name="claw_gear_left">
+    <inertial>
+      <origin
+        xyz="0.00614870313596075 0.00426101151348443 -0.000511537712867605"
+        rpy="0 0 0" />
+      <mass
+        value="0.00146188196614316" />
+      <inertia
+        ixx="1.16317367765852E-07"
+        ixy="-9.11243864675867E-08"
+        ixz="-1.27074222907013E-08"
+        iyy="1.68629131584842E-07"
+        iyz="-8.83462593360449E-09"
+        izz="2.81930562691781E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/claw_gear_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/claw_gear_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_7"
+    type="fixed">
+    <origin
+      xyz="0.064559 0.044814 0.011917"
+      rpy="0 0 0" />
+    <parent
+      link="arm_rot_link" />
+    <child
+      link="claw_gear_left" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      effort="0"
+      velocity="2.25" />
+  </joint>
+  <link
+    name="claw_finger_left">
+    <inertial>
+      <origin
+        xyz="0.0218155754623671 0.00444808086460385 0.000443786418817704"
+        rpy="0 0 0" />
+      <mass
+        value="0.000915119524811432" />
+      <inertia
+        ixx="2.99279444428939E-08"
+        ixy="-6.99478997487584E-08"
+        ixz="-1.68574928938676E-08"
+        iyy="2.47351360164997E-07"
+        iyz="-5.04152477208969E-09"
+        izz="2.74341558668637E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/claw_finger_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/claw_finger_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_9"
+    type="revolute">
+    <origin
+      xyz="0.024668 0.018045 0.0040191"
+      rpy="0 0 0" />
+    <parent
+      link="claw_gear_left" />
+    <child
+      link="claw_finger_left" />
+    <axis
+      xyz="-0.060204 -0.029093 0.99776" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="1.07"
+      velocity="2.25" />
+  </joint>
+  <link
+    name="attach_right">
+    <inertial>
+      <origin
+        xyz="0.0140885154048141 0.00530816472309698 -0.000328948185019273"
+        rpy="0 0 0" />
+      <mass
+        value="0.000201367199453978" />
+      <inertia
+        ixx="3.4730663253518E-09"
+        ixy="-7.99795190058279E-09"
+        ixz="-1.52974359751515E-09"
+        iyy="2.17267078350555E-08"
+        iyz="-5.76883389048401E-10"
+        izz="2.48514622759855E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/attach_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/attach_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_10"
+    type="revolute">
+    <origin
+      xyz="0.092697 0.037021 0.013488"
+      rpy="0 0 0" />
+    <parent
+      link="arm_rot_link" />
+    <child
+      link="attach_right" />
+    <axis
+      xyz="-0.060204 -0.029093 0.99776" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="1.07"
+      velocity="2.25" />
+  </joint>
+  <link
+    name="attach_left">
+    <inertial>
+      <origin
+        xyz="0.0128567962087155 0.00780649279371831 -0.000118290581560876"
+        rpy="0 0 0" />
+      <mass
+        value="0.000201367199467839" />
+      <inertia
+        ixx="7.0125646820852E-09"
+        ixy="-1.07726486492E-08"
+        ixz="-1.39707966904752E-09"
+        iyy="1.81870958832197E-08"
+        iyz="-8.47515470162307E-10"
+        izz="2.48515758704713E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/attach_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbtc_arm_description/meshes/attach_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_11"
+    type="revolute">
+    <origin
+      xyz="0.086606 0.049626 0.013488"
+      rpy="0 0 0" />
+    <parent
+      link="arm_rot_link" />
+    <child
+      link="attach_left" />
+    <axis
+      xyz="-0.060204 -0.029093 0.99776" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="1.07"
+      velocity="2.25" />
+  </joint>
+</robot>

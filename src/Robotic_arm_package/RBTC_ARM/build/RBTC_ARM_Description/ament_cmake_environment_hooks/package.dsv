@@ -1,0 +1,4 @@
+source;share/RBTC_ARM_Description/local_setup.bash
+source;share/RBTC_ARM_Description/local_setup.dsv
+source;share/RBTC_ARM_Description/local_setup.sh
+source;share/RBTC_ARM_Description/local_setup.zsh
